@@ -1,0 +1,57 @@
+void setup()
+{
+kolo.begin();
+}
+
+void loop()
+{
+for(int i=0;i<16;i++)
+{
+kolo.setPixelColor(i, kolo.Color(255, 0, 0));
+delay(czas);
+kolo.show();
+}
+clr016();
+for(int i=16;i>-1;i--)
+{
+kolo.setPixelColor(i, kolo.Color(255, 0, 0));
+delay(czas);
+kolo.show();
+}
+clr160();
+for(int i=0;i<16;i++)
+{
+kolo.setPixelColor(i, kolo.Color(0, 255, 0));
+delay(czas);
+kolo.show();
+}
+clr016();
+for(int i=16;i>-1;i--)
+{
+kolo.setPixelColor(i, kolo.Color(0, 255, 0));
+delay(czas);
+kolo.show();
+}
+clr160();
+}
+
+//--wlasne funkcje--
+void clr016()
+{
+for(int i=0;i<16;i++)
+{
+kolo.setPixelColor(i, kolo.Color(0, 0, 0));
+delay(czas);
+kolo.show();
+}
+}
+
+void clr160()
+{
+for(int i=16;i>-1;i--)
+{
+kolo.setPixelColor(i, kolo.Color(0, 0, 0));
+delay(czas);
+kolo.show();
+}
+}
